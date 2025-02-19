@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.test.CardView
+        android:id="@+id/cvCardList"
+        android:layout_width="138dp"
+        android:layout_height="192dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNameCardListTitle"
+        app:layout_constraintTop_toTopOf="@+id/cvCardList" />
+
+    <TextView
+        android:id="@+id/tvAttackCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/attack"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/cvCardList"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameCardList" />
+
+    <TextView
+        android:id="@+id/tvAttackNumberCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAttackCardList"
+        app:layout_constraintStart_toEndOf="@+id/tvAttackCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvAttackCardList" />
+
+    <TextView
+        android:id="@+id/tvHPNumberCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHPCardList"
+        app:layout_constraintStart_toEndOf="@+id/tvHPCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvHPCardList" />
+
+    <TextView
+        android:id="@+id/tvHPCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/hp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvAttackNumberCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvAttackCardList" />
+
+    <TextView
+        android:id="@+id/tvSpeedCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/speed"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvHPNumberCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvHPCardList" />
+
+    <TextView
+        android:id="@+id/tvSpeedNumberCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSpeedCardList"
+        app:layout_constraintStart_toEndOf="@+id/tvSpeedCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvSpeedCardList" />
+
+    <TextView
+        android:id="@+id/tvRankNumberCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRankCardList"
+        app:layout_constraintStart_toEndOf="@+id/tvRankCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvRankCardList" />
+
+    <TextView
+        android:id="@+id/tvRankCardList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/rank"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSpeedNumberCardList"
+        app:layout_constraintTop_toTopOf="@+id/tvSpeedCardList" />
+
+    <TextView
+        android:id="@+id/tvAbilityTitleList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/ability"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/cvCardList"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpeedCardList" />
+
+    <TextView
+        android:id="@+id/tvNameCardListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/cvCardList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAbilityCardList"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/cvCardList"
+        app:layout_constraintStart_toEndOf="@+id/cvCardList"
+        app:layout_constraintTop_toBottomOf="@+id/tvAbilityTitleList"
+        app:srcCompat="@drawable/no_monster" />
+
+    <TextView
+        android:id="@+id/tvAbilityCardList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:foregroundGravity="top|left"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAbilityCardList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivAbilityCardList"
+        app:layout_constraintTop_toBottomOf="@+id/tvAbilityTitleCardList" />
+
+    <TextView
+        android:id="@+id/tvAbilityTitleCardList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivAbilityCardList"
+        app:layout_constraintTop_toTopOf="@+id/ivAbilityCardList" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

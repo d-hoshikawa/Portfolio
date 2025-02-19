@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardFragment">
+
+    <com.example.test.CardView
+        android:id="@+id/cardView"
+        android:layout_width="345dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintDimensionRatio="23:32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.example.test.CardView>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateName"
+        app:layout_constraintEnd_toStartOf="@+id/btnName"
+        app:layout_constraintStart_toEndOf="@+id/tvCreateName"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateName" />
+
+    <Spinner
+        android:id="@+id/spAttack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/numbers"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateAttack"
+        app:layout_constraintStart_toEndOf="@+id/tvCreateAttack"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateAttack" />
+
+    <TextView
+        android:id="@+id/tvCreateHitPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/hp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/spAttack"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateAttack" />
+
+    <Spinner
+        android:id="@+id/spHitPoint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/numbers"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateHitPoint"
+        app:layout_constraintStart_toEndOf="@+id/tvCreateHitPoint"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateHitPoint" />
+
+    <TextView
+        android:id="@+id/tvCreateSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/speed"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/spHitPoint"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateAttack" />
+
+    <Spinner
+        android:id="@+id/spSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/numbers"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateSpeed"
+        app:layout_constraintEnd_toStartOf="@+id/glRite"
+        app:layout_constraintStart_toEndOf="@+id/tvCreateSpeed"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateSpeed" />
+
+    <TextView
+        android:id="@+id/tvCreateAbility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/ability"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvCreateAttack"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateAttack" />
+
+    <TextView
+        android:id="@+id/tvCreateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreateAttack"
+        app:layout_constraintStart_toStartOf="@+id/glLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tvCost" />
+
+    <TextView
+        android:id="@+id/tvCreateAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreateAbility"
+        app:layout_constraintStart_toStartOf="@+id/tvCreateName"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateName" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/tvCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/rank"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/glLeft"
+        app:layout_constraintTop_toBottomOf="@+id/btnMonster" />
+
+    <TextView
+        android:id="@+id/tvUsableCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/cost_now"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/spCost"
+        app:layout_constraintTop_toTopOf="@+id/tvCost" />
+
+    <TextView
+        android:id="@+id/tvUsableCostNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUsableCost"
+        app:layout_constraintStart_toEndOf="@+id/tvUsableCost"
+        app:layout_constraintTop_toTopOf="@+id/tvUsableCost" />
+
+    <Spinner
+        android:id="@+id/spCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:entries="@array/cost_numbers"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCost"
+        app:layout_constraintStart_toEndOf="@+id/tvCost"
+        app:layout_constraintTop_toTopOf="@+id/tvCost" />
+
+    <Button
+        android:id="@+id/btnName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/decision"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateName"
+        app:layout_constraintEnd_toStartOf="@+id/glRite"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateName" />
+
+    <Button
+        android:id="@+id/btnMonster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monster_change"
+        app:layout_constraintEnd_toStartOf="@+id/glRite"
+        app:layout_constraintStart_toStartOf="@+id/glLeft"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ImageView
+        android:id="@+id/ivAbilityCard"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/bouncing_sword"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateAbility"
+        app:layout_constraintStart_toEndOf="@+id/tvCreateAbility"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateAbility" />
+
+    <TextView
+        android:id="@+id/tvAbility"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:foregroundGravity="top|left"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAbilityCard"
+        app:layout_constraintEnd_toStartOf="@+id/glRite"
+        app:layout_constraintStart_toEndOf="@+id/ivAbilityCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvAbilityTitle" />
+
+    <TextView
+        android:id="@+id/tvAbilityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="top"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/ivAbilityCard"
+        app:layout_constraintTop_toTopOf="@+id/ivAbilityCard" />
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:rotation="-90"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateAbility"
+        app:layout_constraintEnd_toStartOf="@+id/tvCreateAbility"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateAbility" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:rotation="90"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreateAbility"
+        app:layout_constraintStart_toStartOf="@+id/glRite"
+        app:layout_constraintTop_toTopOf="@+id/tvCreateAbility" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

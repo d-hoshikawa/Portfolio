@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Battle_Select_Fragment">
+
+    <FrameLayout
+        android:id="@+id/flMyBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E5F5FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flCompBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFE0E0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flMyBack"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvSelectVard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/select_card_battle"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWinLoseCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/now"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectVard" />
+
+    <TextView
+        android:id="@+id/tvWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/win"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWinCount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWinLoseCount"
+        app:layout_constraintTop_toTopOf="@+id/tvWinLoseCount" />
+
+    <TextView
+        android:id="@+id/tvLose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lose"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvLoseCount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWinCount"
+        app:layout_constraintTop_toTopOf="@+id/tvWinLoseCount" />
+
+    <TextView
+        android:id="@+id/tvDraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/draw_display"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvDrawCount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLoseCount"
+        app:layout_constraintTop_toTopOf="@+id/tvWinLoseCount" />
+
+    <TextView
+        android:id="@+id/tvWinCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWinLoseCount"
+        app:layout_constraintEnd_toStartOf="@+id/tvLose"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWin"
+        app:layout_constraintTop_toTopOf="@+id/tvWinLoseCount" />
+
+    <TextView
+        android:id="@+id/tvLoseCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWinLoseCount"
+        app:layout_constraintEnd_toStartOf="@+id/tvDraw"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLose"
+        app:layout_constraintTop_toTopOf="@+id/tvWinLoseCount" />
+
+    <TextView
+        android:id="@+id/tvDrawCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWinLoseCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDraw"
+        app:layout_constraintTop_toTopOf="@+id/tvWinLoseCount" />
+
+    <ImageView
+        android:id="@+id/ivBackBlack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2E2E2E"
+        android:src="@drawable/no_monster"
+        app:layout_constraintBottom_toBottomOf="@+id/cvMine1"
+        app:layout_constraintEnd_toEndOf="@+id/cvMine1"
+        app:layout_constraintStart_toStartOf="@+id/cvMine1"
+        app:layout_constraintTop_toTopOf="@+id/cvMine1" />
+
+    <ImageView
+        android:id="@+id/ivBackBlack2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2E2E2E"
+        android:src="@drawable/no_monster"
+        app:layout_constraintBottom_toBottomOf="@+id/cvMine2"
+        app:layout_constraintEnd_toEndOf="@+id/cvMine2"
+        app:layout_constraintStart_toStartOf="@+id/cvMine2"
+        app:layout_constraintTop_toTopOf="@+id/cvMine2" />
+
+    <ImageView
+        android:id="@+id/ivBackBlack3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2E2E2E"
+        android:src="@drawable/no_monster"
+        app:layout_constraintBottom_toBottomOf="@+id/cvMine3"
+        app:layout_constraintEnd_toEndOf="@+id/cvMine3"
+        app:layout_constraintStart_toStartOf="@+id/cvMine3"
+        app:layout_constraintTop_toTopOf="@+id/cvMine3" />
+
+    <ImageView
+        android:id="@+id/ivBackBlack4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2E2E2E"
+        android:src="@drawable/no_monster"
+        app:layout_constraintBottom_toBottomOf="@id/cvComp1"
+        app:layout_constraintEnd_toEndOf="@id/cvComp1"
+        app:layout_constraintStart_toStartOf="@id/cvComp1"
+        app:layout_constraintTop_toTopOf="@id/cvComp1" />
+
+    <ImageView
+        android:id="@+id/ivBackBlack5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2E2E2E"
+        android:src="@drawable/no_monster"
+        app:layout_constraintBottom_toBottomOf="@id/cvComp2"
+        app:layout_constraintEnd_toEndOf="@id/cvComp2"
+        app:layout_constraintStart_toStartOf="@id/cvComp2"
+        app:layout_constraintTop_toTopOf="@id/cvComp2" />
+
+    <ImageView
+        android:id="@+id/ivBackBlack6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2E2E2E"
+        android:src="@drawable/no_monster"
+        app:layout_constraintBottom_toBottomOf="@id/cvComp3"
+        app:layout_constraintEnd_toEndOf="@id/cvComp3"
+        app:layout_constraintStart_toStartOf="@id/cvComp3"
+        app:layout_constraintTop_toTopOf="@id/cvComp3" />
+
+    <com.example.test.CardView
+        android:id="@+id/cvMine1"
+        android:layout_width="184dp"
+        android:layout_height="256dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvMine2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMine" />
+
+    <com.example.test.CardView
+        android:id="@+id/cvMine2"
+        android:layout_width="184dp"
+        android:layout_height="256dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvMine3"
+        app:layout_constraintStart_toStartOf="@+id/cvMine1"
+        app:layout_constraintTop_toBottomOf="@+id/cvMine1" />
+
+    <com.example.test.CardView
+        android:id="@+id/cvMine3"
+        android:layout_width="184dp"
+        android:layout_height="256dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cvMine2"
+        app:layout_constraintTop_toBottomOf="@+id/cvMine2" />
+
+    <com.example.test.CardView
+        android:id="@+id/cvComp1"
+        android:layout_width="184dp"
+        android:layout_height="256dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/cvMine1" />
+
+    <com.example.test.CardView
+        android:id="@+id/cvComp2"
+        android:layout_width="184dp"
+        android:layout_height="256dp"
+        app:layout_constraintStart_toStartOf="@+id/cvComp1"
+        app:layout_constraintTop_toTopOf="@+id/cvMine2" />
+
+    <com.example.test.CardView
+        android:id="@+id/cvComp3"
+        android:layout_width="184dp"
+        android:layout_height="256dp"
+        app:layout_constraintStart_toStartOf="@+id/cvComp2"
+        app:layout_constraintTop_toTopOf="@+id/cvMine3" />
+
+    <TextView
+        android:id="@+id/tvMine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_card"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/cvMine1"
+        app:layout_constraintStart_toStartOf="@+id/cvMine1"
+        app:layout_constraintTop_toBottomOf="@+id/tvWinLoseCount" />
+
+    <TextView
+        android:id="@+id/tvComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comp_card"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/cvComp1"
+        app:layout_constraintStart_toStartOf="@+id/cvComp1"
+        app:layout_constraintTop_toTopOf="@+id/tvMine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

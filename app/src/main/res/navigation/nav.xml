@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.test.TitleFragment"
+        android:label="タイトル"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.test.MainMenuFragment"
+        android:label="メインメニュー"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenuFragment_to_tutorialFragment"
+            app:destination="@id/tutorialFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_cardListFragment"
+            app:destination="@id/cardListFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_battle_Select_Fragment"
+            app:destination="@id/battle_Select_Fragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_deckListFragment"
+            app:destination="@id/deckListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.test.CardFragment"
+        android:label="カード作成"
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_cardFragment_to_cardIllustFragment"
+            app:destination="@id/cardIllustFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deckFragment"
+        android:name="com.example.test.DeckFragment"
+        android:label="デッキ作成"
+        tools:layout="@layout/fragment_deck" />
+    <fragment
+        android:id="@+id/battleFragment"
+        android:name="com.example.test.BattleFragment"
+        android:label="バトル"
+        tools:layout="@layout/fragment_battle" >
+        <action
+            android:id="@+id/action_battleFragment_to_battle_Select_Fragment"
+            app:destination="@id/battle_Select_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="com.example.test.TutorialFragment"
+        android:label="fragment_tutorial"
+        tools:layout="@layout/fragment_tutorial" />
+    <fragment
+        android:id="@+id/cardListFragment"
+        android:name="com.example.test.CardListFragment"
+        android:label="fragment_card_list"
+        tools:layout="@layout/fragment_card_list" >
+        <action
+            android:id="@+id/action_cardListFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardIllustFragment"
+        android:name="com.example.test.CardIllustFragment"
+        android:label="fragment_card_illust"
+        tools:layout="@layout/fragment_card_illust" />
+    <fragment
+        android:id="@+id/battle_Select_Fragment"
+        android:name="com.example.test.Battle_Select_Fragment"
+        android:label="fragment_battle__select_"
+        tools:layout="@layout/fragment_battle__select_" >
+        <action
+            android:id="@+id/action_battle_Select_Fragment_to_battleFragment"
+            app:destination="@id/battleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deckListFragment"
+        android:name="com.example.test.DeckListFragment"
+        android:label="fragment_deck_list"
+        tools:layout="@layout/fragment_deck_list" >
+        <action
+            android:id="@+id/action_deckListFragment_to_deckFragment"
+            app:destination="@id/deckFragment" />
+    </fragment>
+</navigation>
