@@ -260,12 +260,13 @@ public class BattleFragment extends Fragment {
             if (battleAT.getAbility() == 1)
                 if (battleDF.getHitpoint() != 1) {
                     battleDF.triggerAbilityEffect(1);
-                    battleDF.changeHP(battleDF.getHitpoint() - 1);
+                    battleDF.changeHP(battleDF.getHitpoint() - (battleAT.getAttack() / 2));
                 }
             if (battleDF.getAbility() == 1) {
-                if (battleAT.getHitpoint() != 1)
+                if (battleAT.getHitpoint() != 1) {
                     battleAT.triggerAbilityEffect(1);
-                    battleAT.changeHP(battleAT.getHitpoint() - 1);
+                    battleAT.changeHP(battleAT.getHitpoint() - (battleDF.getAttack() / 2));
+                }
             }
         }
     }

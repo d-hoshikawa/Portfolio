@@ -29,7 +29,7 @@
     </string-array>
     <string-array name="ability_title">
         <item>能力なし</item>
-        <item>先制攻撃(コスト1)</item>
+        <item>先制攻撃(コスト4)</item>
         <item>猛毒(コスト3)</item>
         <item>自己再生(コスト2)</item>
         <item>くいしばり(コスト5)</item>
