@@ -187,7 +187,7 @@ public class CardView extends ConstraintLayout {
     int[] frames = {R.drawable.cardframe3, R.drawable.cardframe2, R.drawable.cardframe};
 
     int[] costs = {10, 15, 20};
-    int[] abilityCosts = {0, 1, 3, 2, 5, 2, 5};
+    int[] abilityCosts = {0, 4, 3, 2, 5, 2, 5};
 
     ArrayList<Integer> abilities = new ArrayList<>(Arrays.asList(
             R.drawable.no_monster,
