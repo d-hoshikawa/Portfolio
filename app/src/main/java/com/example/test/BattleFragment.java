@@ -257,16 +257,17 @@ public class BattleFragment extends Fragment {
     //1,先制攻撃
     private void ability1() {
         if (battleAT.getAbility() != 6 && battleDF.getAbility() != 6) {
-            if (battleAT.getAbility() == 1)
-                if (battleDF.getHitpoint() != 1) {
-                    battleDF.triggerAbilityEffect(1);
-                    battleDF.changeHP(battleDF.getHitpoint() - (battleAT.getAttack() / 2));
-                }
+            if (battleAT.getAbility() == 1) {
+                battleDF.triggerAbilityEffect(1);
+                battleDF.changeHP(battleDF.getHitpoint() - (battleAT.getAttack() / 2));
+                if (battleDF.getHitpoint() <= 0)
+                    battleDF.setHitpoint(1);
+            }
             if (battleDF.getAbility() == 1) {
-                if (battleAT.getHitpoint() != 1) {
-                    battleAT.triggerAbilityEffect(1);
-                    battleAT.changeHP(battleAT.getHitpoint() - (battleDF.getAttack() / 2));
-                }
+                battleAT.triggerAbilityEffect(1);
+                battleAT.changeHP(battleAT.getHitpoint() - (battleDF.getAttack() / 2));
+                if (battleAT.getHitpoint() <= 0)
+                    battleAT.setHitpoint(1);
             }
         }
     }

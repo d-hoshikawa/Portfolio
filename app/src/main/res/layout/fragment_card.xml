@@ -216,8 +216,8 @@
 
     <ImageView
         android:id="@+id/ivAbilityCard"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:src="@drawable/bouncing_sword"
         app:layout_constraintBottom_toBottomOf="@+id/tvCreateAbility"
         app:layout_constraintStart_toEndOf="@+id/tvCreateAbility"
@@ -229,7 +229,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:foregroundGravity="top|left"
-        android:textSize="15sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivAbilityCard"
         app:layout_constraintEnd_toStartOf="@+id/glRite"
         app:layout_constraintStart_toEndOf="@+id/ivAbilityCard"
@@ -240,7 +240,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:foregroundGravity="top"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/ivAbilityCard"
         app:layout_constraintTop_toTopOf="@+id/ivAbilityCard" />
 
