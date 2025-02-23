@@ -135,7 +135,7 @@ public class DeckListFragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/deck_state.php";
+                return getString(R.string.deck_state);
             }
         };
         gds.execute();

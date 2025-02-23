@@ -137,7 +137,7 @@ public class CardListFragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/card_state.php";
+                return getString(R.string.card_state);
             }
         };
         gcs.execute();

@@ -121,7 +121,7 @@ public class Battle_Select_Fragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/comp_card_state.php";
+                return getString(R.string.comp_card_state);
             }
         };
         gccs.execute();

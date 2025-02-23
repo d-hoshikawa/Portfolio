@@ -113,7 +113,7 @@ public class DeckFragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/receive_deck_state.php";
+                return getString(R.string.receive_deck_state);
             }
         };
 
@@ -140,7 +140,7 @@ public class DeckFragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/delete_deck_state.php";
+                return getString(R.string.delete_deck_state);
             }
         };
 

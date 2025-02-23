@@ -173,7 +173,7 @@ public class CardFragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/receive_card_state.php";
+                return getString(R.string.receive_card_state);
             }
         };
 
@@ -203,7 +203,7 @@ public class CardFragment extends Fragment {
 
             @Override
             public String accessURI() {
-                return "http://10.0.2.2/delete_card_state.php";
+                return getString(R.string.delete_card_state);
             }
         };
 

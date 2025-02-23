@@ -102,4 +102,19 @@
     <string name="tutorial_card">【カードについて】\n\n・カードには「ノーマル」「レア」「スーパーレア」の3種類があり、それぞれにコストの上限が10,15,20と設定されています。\n・各カードの初期ステータスは攻撃・体力・スピードがそれぞれ1です。\n・攻撃は+1ごとに2コスト、体力とスピードは+1ごとに1コスト消費します。\n・カードには能力を付与することができ、能力ごとに必要コストは違います。\n</string>
     <string name="tutorial_deck">【デッキについて】\n\n・各プレイヤーは3枚のカードを1つのデッキとして使用します。\n・デッキは、「ノーマル」「レア」「スーパーレア」のカードをそれぞれ1枚ずつ採用します。\n</string>
     <string name="tutorial_battle">【バトルについて】\n\n・バトルは3フェイズで行われます。各フェイズでプレイヤーはデッキから1枚のカードを選択します。その際相手のカードをすべて見ることができます。\n・各フェイズでは、カードのスピードが高い方が先攻となり、その攻撃力分、相手カードの体力を削ります。\n・そのフェイズで相手の体力を先に0にしたカードが勝利となり、3フェイズ中に勝利した回数が多い方が最終勝者となります。\n・3フェイズ中に勝利したフェイズが多い方が、最終的な勝者となります。</string>
+
+    <!--    カードのデータ入手-->
+    <string name="card_state">http://10.0.2.2/card_state.php</string>
+    <!--    カードのデータ登録-->
+    <string name="receive_card_state">http://10.0.2.2/receive_card_state.php</string>
+    <!--    カードのデータ削除-->
+    <string name="delete_card_state">http://10.0.2.2/delete_card_state.php</string>
+    <!--    コンピュータのカードのデータ入手-->
+    <string name="comp_card_state">http://10.0.2.2/comp_card_state.php</string>
+    <!--    デッキのデータ入手-->
+    <string name="deck_state">http://10.0.2.2/deck_state.php</string>
+    <!--    デッキのデータ登録-->
+    <string name="receive_deck_state">http://10.0.2.2/receive_deck_state.php</string>
+    <!--    デッキのデータ削除-->
+    <string name="delete_deck_state">http://10.0.2.2/delete_deck_state.php</string>
 </resources>
