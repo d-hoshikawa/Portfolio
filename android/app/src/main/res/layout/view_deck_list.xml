@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv2DeckList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/no_monster" />
+
+    <com.example.test.CardView
+        android:id="@+id/cv1DeckList"
+        android:layout_width="138dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/cv2DeckList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeckTitleDeckList" />
+
+    <com.example.test.CardView
+        android:id="@+id/cv2DeckList"
+        android:layout_width="138dp"
+        android:layout_height="192dp"
+        app:layout_constraintEnd_toStartOf="@+id/cv3DeckList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv1DeckList"
+        app:layout_constraintTop_toTopOf="@+id/cv1DeckList" />
+
+    <com.example.test.CardView
+        android:id="@+id/cv3DeckList"
+        android:layout_width="138dp"
+        android:layout_height="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv2DeckList"
+        app:layout_constraintTop_toTopOf="@+id/cv2DeckList" />
+
+    <TextView
+        android:id="@+id/tvDeckTitleDeckList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/new_deck"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDeckIdDeckList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

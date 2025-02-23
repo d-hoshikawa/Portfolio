@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TutorialFragment">
+
+    <TextView
+        android:id="@+id/tvTutorialCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tutorial_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTutorial" />
+
+    <TextView
+        android:id="@+id/tvTutorialDeck"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tutorial_deck"
+        app:layout_constraintEnd_toEndOf="@+id/tvTutorialCard"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvTutorialCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvTutorialCard" />
+
+    <TextView
+        android:id="@+id/tvTutorialBattle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tutorial_battle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTutorialDeck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvTutorialDeck"
+        app:layout_constraintTop_toBottomOf="@+id/tvTutorialDeck" />
+
+    <Button
+        android:id="@+id/btnOkTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_main_manu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTutorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tutorial"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
