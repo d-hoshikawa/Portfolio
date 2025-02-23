@@ -3,7 +3,6 @@ package com.example.test;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class CardView extends ConstraintLayout {
+public class MyCardView extends ConstraintLayout {
 
     //攻撃力
     private int attack = 1;
@@ -135,15 +134,15 @@ public class CardView extends ConstraintLayout {
         this.name = name;
     }
 
-    public CardView(@NonNull Context context) {
+    public MyCardView(@NonNull Context context) {
         this(context, null);
     }
 
-    public CardView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public MyCardView(@NonNull Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CardView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MyCardView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         View.inflate(getContext(), R.layout.view_card, this);
     }
@@ -274,7 +273,7 @@ public class CardView extends ConstraintLayout {
         setCostNow(getCost() - getHitpoint() - (getAttack() * 2) - getSpeed() + 4);
     }
 
-    public void AtoB(CardView a) {
+    public void AtoB(MyCardView a) {
         this.setCardId(a.getCardId());
         this.changeName(a.getName());
         this.changeAttack(a.getAttack());

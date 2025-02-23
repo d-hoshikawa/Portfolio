@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".BattleFragment">
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvMineBattle"
         android:layout_width="229dp"
         android:layout_height="291dp"
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvCompBattle" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvCompBattle"
         android:layout_width="229dp"
         android:layout_height="291dp"

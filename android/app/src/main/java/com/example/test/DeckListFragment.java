@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,7 +20,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -110,7 +108,7 @@ public class DeckListFragment extends Fragment {
                     JSONArray ary = new JSONArray(string);
                     for (int i = 0; i < ary.length(); i++) {
                         JSONObject ln = ary.getJSONObject(i);
-                        CardView card = new CardView(requireContext());
+                        MyCardView card = new MyCardView(requireContext());
                         card.changeCard(ln.getInt("id"), ln.getString("name"), ln.getInt("attack"), ln.getInt("hp")
                                 , ln.getInt("speed"), ln.getInt("crank"), ln.getInt("monster"), ln.getInt("ability"));
                         int d_id = ln.getInt("d_id");
@@ -146,11 +144,11 @@ public class DeckListFragment extends Fragment {
         lvDeckList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                viewModel.setCardMine1(new CardView(requireContext()));
+                viewModel.setCardMine1(new MyCardView(requireContext()));
                 viewModel.getCardMine1().AtoB(view.findViewById(R.id.cv1DeckList));
-                viewModel.setCardMine2(new CardView(requireContext()));
+                viewModel.setCardMine2(new MyCardView(requireContext()));
                 viewModel.getCardMine2().AtoB(view.findViewById(R.id.cv2DeckList));
-                viewModel.setCardMine3(new CardView(requireContext()));
+                viewModel.setCardMine3(new MyCardView(requireContext()));
                 viewModel.getCardMine3().AtoB(view.findViewById(R.id.cv3DeckList));
                 if (getArguments() != null) {
                     String source = getArguments().getString("source");

@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/no_monster" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cv1DeckList"
         android:layout_width="138dp"
         android:layout_height="192dp"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDeckTitleDeckList" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cv2DeckList"
         android:layout_width="138dp"
         android:layout_height="192dp"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toEndOf="@+id/cv1DeckList"
         app:layout_constraintTop_toTopOf="@+id/cv1DeckList" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cv3DeckList"
         android:layout_width="138dp"
         android:layout_height="192dp"

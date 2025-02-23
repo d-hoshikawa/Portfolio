@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvCardList"
         android:layout_width="138dp"
         android:layout_height="192dp"

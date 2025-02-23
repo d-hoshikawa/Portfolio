@@ -1,7 +1,6 @@
 package com.example.test;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,8 +16,6 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -79,14 +76,14 @@ public class Battle_Select_Fragment extends Fragment {
         TextView tvWin = view.findViewById(R.id.tvWinCount);
         TextView tvLose = view.findViewById(R.id.tvLoseCount);
         TextView tvDraw = view.findViewById(R.id.tvDrawCount);
-        CardView cvMine1 = view.findViewById(R.id.cvMine1);
-        CardView cvMine2 = view.findViewById(R.id.cvMine2);
-        CardView cvMine3 = view.findViewById(R.id.cvMine3);
-        CardView cvComp1 = view.findViewById(R.id.cvComp1);
-        CardView cvComp2 = view.findViewById(R.id.cvComp2);
-        CardView cvComp3 = view.findViewById(R.id.cvComp3);
-        CardView[] cards = {cvMine1, cvMine2, cvMine3, cvComp1, cvComp2, cvComp3};
-        CardView[] comps = {cvComp1, cvComp2, cvComp3};
+        MyCardView cvMine1 = view.findViewById(R.id.cvMine1);
+        MyCardView cvMine2 = view.findViewById(R.id.cvMine2);
+        MyCardView cvMine3 = view.findViewById(R.id.cvMine3);
+        MyCardView cvComp1 = view.findViewById(R.id.cvComp1);
+        MyCardView cvComp2 = view.findViewById(R.id.cvComp2);
+        MyCardView cvComp3 = view.findViewById(R.id.cvComp3);
+        MyCardView[] cards = {cvMine1, cvMine2, cvMine3, cvComp1, cvComp2, cvComp3};
+        MyCardView[] comps = {cvComp1, cvComp2, cvComp3};
         int[] vids = {R.id.cvMine1, R.id.cvMine2, R.id.cvMine3};
 
         //勝敗表示
@@ -147,7 +144,7 @@ public class Battle_Select_Fragment extends Fragment {
                 cards[i].setAlpha(0.15f);
         }
 
-        CardView[] cids = {viewModel.getCardMine1(), viewModel.getCardMine2(), viewModel.getCardMine3()};
+        MyCardView[] cids = {viewModel.getCardMine1(), viewModel.getCardMine2(), viewModel.getCardMine3()};
 
         //カード選択処理
         View.OnClickListener listener = v -> {

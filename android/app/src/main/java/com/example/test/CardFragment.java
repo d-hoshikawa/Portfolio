@@ -1,7 +1,6 @@
 package com.example.test;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
 
@@ -18,7 +17,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -79,7 +77,7 @@ public class CardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_card, container, false);
 
         //各種取得
-        CardView cv = view.findViewById(R.id.cardView);
+        MyCardView cv = view.findViewById(R.id.cardView);
         EditText etName = view.findViewById(R.id.etName);
         Spinner spAttack = view.findViewById(R.id.spAttack);
         Spinner spHitPoint = view.findViewById(R.id.spHitPoint);
@@ -112,7 +110,7 @@ public class CardFragment extends Fragment {
         //モンスターのイラストセット
         CardViewModel viewModel = new ViewModelProvider(requireActivity()).get(CardViewModel.class);
         if (viewModel.getCardMine1() == null) {
-            viewModel.setCardMine1(new CardView(requireContext()));
+            viewModel.setCardMine1(new MyCardView(requireContext()));
         } else {
             cv.AtoB(viewModel.getCardMine1());
         }

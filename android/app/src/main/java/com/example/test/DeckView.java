@@ -6,7 +6,7 @@ public class DeckView {
     private int id;
     private int d_id;
     private String d_name;
-    private ArrayList<CardView> cards;
+    private ArrayList<MyCardView> cards;
 
     public DeckView(int d_id, String d_name) {
         this.d_id = d_id;
@@ -38,15 +38,15 @@ public class DeckView {
         this.d_name = d_name;
     }
 
-    public ArrayList<CardView> getCards() {
+    public ArrayList<MyCardView> getCards() {
         return cards;
     }
 
-    public void setCards(ArrayList<CardView> cards) {
+    public void setCards(ArrayList<MyCardView> cards) {
         this.cards = cards;
     }
 
-    public void addCard(CardView card) {
+    public void addCard(MyCardView card) {
         cards.add(card);
     }
 }

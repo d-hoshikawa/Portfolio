@@ -14,11 +14,11 @@ import java.util.ArrayList;
 
 public class CardListAdapter extends BaseAdapter {
     private Context context;
-    private ArrayList<CardView> data;
+    private ArrayList<MyCardView> data;
     private int resource;
     private LayoutInflater inflater;
 
-    public CardListAdapter(Context context, ArrayList<CardView> data, int resource) {
+    public CardListAdapter(Context context, ArrayList<MyCardView> data, int resource) {
         this.context = context;
         this.data = data;
         this.resource = resource;
@@ -31,7 +31,7 @@ public class CardListAdapter extends BaseAdapter {
     }
 
     @Override
-    public CardView getItem(int position) {
+    public MyCardView getItem(int position) {
         return data.get(position);
     }
 
@@ -42,9 +42,9 @@ public class CardListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        CardView item = getItem(position);
+        MyCardView item = getItem(position);
         View view = (convertView != null) ? convertView : inflater.inflate(resource, null);
-        ((CardView) view.findViewById(R.id.cvCardList)).AtoB(item);
+        ((MyCardView) view.findViewById(R.id.cvCardList)).AtoB(item);
         ((TextView) view.findViewById(R.id.tvNameCardList)).setText(item.getName());
         ((TextView) view.findViewById(R.id.tvAttackNumberCardList)).setText(String.valueOf(item.getAttack()));
         ((TextView) view.findViewById(R.id.tvHPNumberCardList)).setText(String.valueOf(item.getHitpoint()));

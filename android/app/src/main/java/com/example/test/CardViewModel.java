@@ -7,12 +7,12 @@ public class CardViewModel extends ViewModel {
     private int pointsComp = 0;
     private int draw = 0;
     private int battlePhase = 0;
-    private CardView cardMine1;
-    private CardView cardMine2;
-    private CardView cardMine3;
-    private CardView cardComp1;
-    private CardView cardComp2;
-    private CardView cardComp3;
+    private MyCardView cardMine1;
+    private MyCardView cardMine2;
+    private MyCardView cardMine3;
+    private MyCardView cardComp1;
+    private MyCardView cardComp2;
+    private MyCardView cardComp3;
 
     public int getPointsComp() {
         return pointsComp;
@@ -46,51 +46,51 @@ public class CardViewModel extends ViewModel {
         this.battlePhase = battlePhase;
     }
 
-    public CardView getCardMine1() {
+    public MyCardView getCardMine1() {
         return cardMine1;
     }
 
-    public void setCardMine1(CardView cardMine1) {
+    public void setCardMine1(MyCardView cardMine1) {
         this.cardMine1 = cardMine1;
     }
 
-    public CardView getCardMine2() {
+    public MyCardView getCardMine2() {
         return cardMine2;
     }
 
-    public void setCardMine2(CardView cardMine2) {
+    public void setCardMine2(MyCardView cardMine2) {
         this.cardMine2 = cardMine2;
     }
 
-    public CardView getCardMine3() {
+    public MyCardView getCardMine3() {
         return cardMine3;
     }
 
-    public void setCardMine3(CardView cardMine3) {
+    public void setCardMine3(MyCardView cardMine3) {
         this.cardMine3 = cardMine3;
     }
 
-    public CardView getCardComp1() {
+    public MyCardView getCardComp1() {
         return cardComp1;
     }
 
-    public void setCardComp1(CardView cardComp1) {
+    public void setCardComp1(MyCardView cardComp1) {
         this.cardComp1 = cardComp1;
     }
 
-    public CardView getCardComp2() {
+    public MyCardView getCardComp2() {
         return cardComp2;
     }
 
-    public void setCardComp2(CardView cardComp2) {
+    public void setCardComp2(MyCardView cardComp2) {
         this.cardComp2 = cardComp2;
     }
 
-    public CardView getCardComp3() {
+    public MyCardView getCardComp3() {
         return cardComp3;
     }
 
-    public void setCardComp3(CardView cardComp3) {
+    public void setCardComp3(MyCardView cardComp3) {
         this.cardComp3 = cardComp3;
     }
 }

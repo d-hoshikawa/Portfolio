@@ -12,14 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,9 +79,9 @@ public class DeckFragment extends Fragment {
         Button btnDelete = view.findViewById(R.id.btnDeleteDeck);
         TextView tvTitle = view.findViewById(R.id.tvDeckTitle);
         EditText etTitle = view.findViewById(R.id.etDeckTitle);
-        CardView cv1 = view.findViewById(R.id.cv1Deck);
-        CardView cv2 = view.findViewById(R.id.cv2Deck);
-        CardView cv3 = view.findViewById(R.id.cv3Deck);
+        MyCardView cv1 = view.findViewById(R.id.cv1Deck);
+        MyCardView cv2 = view.findViewById(R.id.cv2Deck);
+        MyCardView cv3 = view.findViewById(R.id.cv3Deck);
         CardViewModel viewModel = new ViewModelProvider(requireActivity()).get(CardViewModel.class);
 
         //デッキ登録用ネットワーク構築
@@ -193,7 +189,7 @@ public class DeckFragment extends Fragment {
 
         //保存ボタンの処理
         btnSave.setOnClickListener(v -> {
-            CardView[] cvs = {cv1, cv2, cv3};
+            MyCardView[] cvs = {cv1, cv2, cv3};
             boolean deck = true;
             //選択されてないカードが無いかどうか
             for (int i = 0; i < cvs.length; i++) {

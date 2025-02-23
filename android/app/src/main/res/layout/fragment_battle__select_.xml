@@ -186,7 +186,7 @@
         app:layout_constraintStart_toStartOf="@id/cvComp3"
         app:layout_constraintTop_toTopOf="@id/cvComp3" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvMine1"
         android:layout_width="184dp"
         android:layout_height="256dp"
@@ -196,7 +196,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMine" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvMine2"
         android:layout_width="184dp"
         android:layout_height="256dp"
@@ -204,7 +204,7 @@
         app:layout_constraintStart_toStartOf="@+id/cvMine1"
         app:layout_constraintTop_toBottomOf="@+id/cvMine1" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvMine3"
         android:layout_width="184dp"
         android:layout_height="256dp"
@@ -212,7 +212,7 @@
         app:layout_constraintStart_toStartOf="@+id/cvMine2"
         app:layout_constraintTop_toBottomOf="@+id/cvMine2" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvComp1"
         android:layout_width="184dp"
         android:layout_height="256dp"
@@ -221,14 +221,14 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/cvMine1" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvComp2"
         android:layout_width="184dp"
         android:layout_height="256dp"
         app:layout_constraintStart_toStartOf="@+id/cvComp1"
         app:layout_constraintTop_toTopOf="@+id/cvMine2" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cvComp3"
         android:layout_width="184dp"
         android:layout_height="256dp"

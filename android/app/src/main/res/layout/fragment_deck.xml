@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="@+id/cv3Deck"
         app:layout_constraintTop_toTopOf="@+id/tvRank2" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cv1Deck"
         android:layout_width="162dp"
         android:layout_height="232dp"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRank1" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cv2Deck"
         android:layout_width="162dp"
         android:layout_height="232dp"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toEndOf="@+id/cv1Deck"
         app:layout_constraintTop_toTopOf="@+id/cv1Deck" />
 
-    <com.example.test.CardView
+    <com.example.test.MyCardView
         android:id="@+id/cv3Deck"
         android:layout_width="162dp"
         android:layout_height="232dp"

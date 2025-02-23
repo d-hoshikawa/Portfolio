@@ -48,11 +48,11 @@ public class DeckListAdapter extends BaseAdapter {
         for (int i = 0; i < item.getCards().size(); i++) {
             int rank = item.getCards().get(i).getRank();
             if (rank == 1)
-                ((CardView) view.findViewById(R.id.cv1DeckList)).AtoB(item.getCards().get(i));
+                ((MyCardView) view.findViewById(R.id.cv1DeckList)).AtoB(item.getCards().get(i));
             else if (rank == 2)
-                ((CardView) view.findViewById(R.id.cv2DeckList)).AtoB(item.getCards().get(i));
+                ((MyCardView) view.findViewById(R.id.cv2DeckList)).AtoB(item.getCards().get(i));
             else if (rank == 3)
-                ((CardView) view.findViewById(R.id.cv3DeckList)).AtoB(item.getCards().get(i));
+                ((MyCardView) view.findViewById(R.id.cv3DeckList)).AtoB(item.getCards().get(i));
         }
         return view;
     }

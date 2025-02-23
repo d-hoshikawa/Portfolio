@@ -19,7 +19,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -93,12 +92,12 @@ public class CardListFragment extends Fragment {
         Network gcs = new Network() {
             @Override
             public void onResponse(String string) {
-                ArrayList<CardView> list = new ArrayList<>();
+                ArrayList<MyCardView> list = new ArrayList<>();
                 try {
                     JSONArray ary = new JSONArray(string);
                     for (int i = 0; i < ary.length(); i++) {
                         JSONObject ln = ary.getJSONObject(i);
-                        CardView item = new CardView(requireContext());
+                        MyCardView item = new MyCardView(requireContext());
                         item.setCardId(ln.getInt("id"));
                         item.changeName(ln.getString("name"));
                         item.changeAttack(ln.getInt("attack"));
@@ -147,7 +146,7 @@ public class CardListFragment extends Fragment {
         lvCardList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                CardView cardView = view.findViewById(R.id.cvCardList);
+                MyCardView cardView = view.findViewById(R.id.cvCardList);
                 CardViewModel viewModel = new ViewModelProvider(requireActivity()).get(CardViewModel.class);
                 if (getArguments() != null) {
                     String source = getArguments().getString("source");
@@ -155,21 +154,21 @@ public class CardListFragment extends Fragment {
                     //もしデッキ作成から来ているなら
                     if ("Deck".equals(source)) {
                         if (rank == 1) {
-                            CardView cv = new CardView(requireContext());
+                            MyCardView cv = new MyCardView(requireContext());
                             viewModel.setCardMine1(cv);
                             viewModel.getCardMine1().AtoB(cardView);
                         } else if (rank == 2) {
-                            CardView cv = new CardView(requireContext());
+                            MyCardView cv = new MyCardView(requireContext());
                             viewModel.setCardMine2(cv);
                             viewModel.getCardMine2().AtoB(cardView);
                         } else {
-                            CardView cv = new CardView(requireContext());
+                            MyCardView cv = new MyCardView(requireContext());
                             viewModel.setCardMine3(cv);
                             viewModel.getCardMine3().AtoB(cardView);
                         }
                         getParentFragmentManager().popBackStack();
                     } else if ("mainCard".equals(source)) {
-                        CardView cv = new CardView(requireContext());
+                        MyCardView cv = new MyCardView(requireContext());
                         viewModel.setCardMine1(cv);
                         viewModel.getCardMine1().AtoB(cardView);
                         Bundle bundle = new Bundle();

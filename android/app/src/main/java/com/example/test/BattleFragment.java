@@ -6,9 +6,7 @@ import android.animation.ObjectAnimator;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,14 +64,14 @@ public class BattleFragment extends Fragment {
         }
     }
 
-    private ArrayList<CardView> cards = new ArrayList<>();
+    private ArrayList<MyCardView> cards = new ArrayList<>();
     private int turn = -1;
     private int poisonSelf = 0;
     private int poisonOpp = 0;
     private int gutsSelf = 0;
     private int gutsOpp = 0;
     int turnCount = 0;
-    private CardView battleAT, battleDF;
+    private MyCardView battleAT, battleDF;
     private View view;
     private CardViewModel viewModel;
     private TextView anser;
@@ -90,8 +88,8 @@ public class BattleFragment extends Fragment {
         btnNext = view.findViewById(R.id.btnNext);
         viewModel = new ViewModelProvider(requireActivity()).get(CardViewModel.class);
         cards = new ArrayList<>();
-        CardView card = view.findViewById(R.id.cvMineBattle);
-        CardView card2 = view.findViewById(R.id.cvCompBattle);
+        MyCardView card = view.findViewById(R.id.cvMineBattle);
+        MyCardView card2 = view.findViewById(R.id.cvCompBattle);
 
         //最終バトルの場合次へボタンの表示変更
         if (viewModel.getBattlePhase() == 2) {
@@ -103,7 +101,7 @@ public class BattleFragment extends Fragment {
 
         //カードデータ登録
         //ユーザー側
-        CardView[] cids = {viewModel.getCardMine1(), viewModel.getCardMine2(), viewModel.getCardMine3()};
+        MyCardView[] cids = {viewModel.getCardMine1(), viewModel.getCardMine2(), viewModel.getCardMine3()};
         for (int i = 0; i < cids.length; i++) {
             if (cids[i].getCardId() == 0) {
                 card.AtoB(cids[i]);
@@ -113,7 +111,7 @@ public class BattleFragment extends Fragment {
         }
 
         //コンピューター側
-        CardView[] cidsComp = {viewModel.getCardComp1(), viewModel.getCardComp2(), viewModel.getCardComp3()};
+        MyCardView[] cidsComp = {viewModel.getCardComp1(), viewModel.getCardComp2(), viewModel.getCardComp3()};
         int cnt = 0;
         while (true) {
             if (cidsComp[cnt].getCardId() != -1 && rand.nextInt(3) == cnt) {
@@ -174,7 +172,7 @@ public class BattleFragment extends Fragment {
             return;
         } else if (battleDF != null && battleAT.getHitpoint() <= 0) {
             // 攻撃者と防御者を交代
-            CardView temp = battleAT;
+            MyCardView temp = battleAT;
             battleAT = battleDF;
             battleDF = temp;
             showBattleResult();
@@ -195,7 +193,7 @@ public class BattleFragment extends Fragment {
             ability1();
         } else {
             // 攻撃者と防御者を交代
-            CardView temp = battleAT;
+            MyCardView temp = battleAT;
             battleAT = battleDF;
             battleDF = temp;
         }
