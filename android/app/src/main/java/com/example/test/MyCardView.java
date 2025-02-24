@@ -270,7 +270,7 @@ public class MyCardView extends ConstraintLayout {
         changeRank(rn);
         changeMonster(mn);
         changeAbility(ab);
-        setCostNow(getCost() - getHitpoint() - (getAttack() * 2) - getSpeed() + 4);
+        costNow();
     }
 
     public void AtoB(MyCardView a) {
@@ -283,7 +283,7 @@ public class MyCardView extends ConstraintLayout {
         this.changeMonster(a.getMonster());
         this.changeAbility(a.getAbility());
         this.changeBack(a.getBack());
-        setCostNow(getCost() - getHitpoint() - (getAttack() * 2) - getSpeed() + 4);
+        costNow();
     }
 
     public void costNowDisplay(TextView tv) {

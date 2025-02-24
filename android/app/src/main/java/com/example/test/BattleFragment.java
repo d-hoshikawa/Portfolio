@@ -217,7 +217,7 @@ public class BattleFragment extends Fragment {
                     public void onAnimationEnd(Animator animation) {
                         // ③ ダメージ計算：防御側のHPから攻撃側の攻撃力分を引く
                         int newHP = battleDF.getHitpoint() - battleAT.getAttack();
-                        battleDF.changeHP(newHP); // HP表示の更新（各CardViewで実装済みの場合）
+                        battleDF.changeHP(newHP); // HP表示の更新
                         //「くいしばり」の判定
                         ability4();
                         //能力「自己再生」の判定
